@@ -15,20 +15,18 @@ Nesse projeto foi utilizado uma gem do Ruby chamada Json Matchers para fazer as 
 ## Guia de instalação
 - Todo o código do projeto se encontra no repositório
 
-1. Dependências Globais
+1. Dependências do Projeto
 
     * Instalar o [Ruby + Devkit] link para download =>(https://rubyinstaller.org/downloads/)
     - Recomendo utilizar a versão 3.1.0 a qual foi utilizado no projeto
 
-2. Dependências
-    * Instalar Bundler
+2. Instalar o Bundler
     - Bundler é o gerenciador de gems do Ruby, oferece um ambiente consistente para o gerenciamento e instalação das dependencias do projeto.
     ```
     $ gem install bundler
     ```
 
-2. Dependências do Projeto
-	* Instalar as gems
+3. Instalar as gems, apos ter instalar o bundler no passo anterior
 	```
 	$ bundle install
 	```
