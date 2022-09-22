@@ -53,7 +53,7 @@ Nesse projeto foi utilizado uma gem do Ruby chamada Json Matchers para fazer as 
 
     Com esse comando o allure irá abrir o browser mostrando os resultados da sua ultima execução no seu navegador.
 
-### Auto do Projeto
+### Autor do Projeto
 - Samuel Rossato
 
 ### Site utilizado para fazer a conversão do responseBody em Json Schema
