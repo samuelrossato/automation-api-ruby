@@ -14,7 +14,6 @@ describe "API VIA_CEP" do
             @ceps.each do |cep|
                 response = ViaCep.consulta_cep(cep)
                 expect(response.code).to eq 200
-                puts response.code
                 expect(response.body).to match_json_schema("response_body/response_cep")
             end
         end

@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Execute automation of API
+    name: Execute automation of APIs
     runs-on: ubuntu-latest
 
     steps:
