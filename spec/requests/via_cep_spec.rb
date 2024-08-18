@@ -7,6 +7,7 @@ describe "API VIA_CEP" do
         it "Consultar cep aleatório" do
             response = ViaCep.consulta_cep(@ceps.sample)
             expect(response.code).to eq 200
+            puts response.code
             expect(response.body).to match_json_schema("response_body/response_cep")
         end
 
