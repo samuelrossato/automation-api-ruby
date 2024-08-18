@@ -10,7 +10,7 @@ describe "API VIA_CEP" do
             expect(response.body).to match_json_schema("response_body/response_cep")
         end
 
-        it "Consultar lista de ceps disponíveis" do
+        it "Consultar lista de ceps que estão disponíveis" do
             @ceps.each do |cep|
                 response = ViaCep.consulta_cep(cep)
                 expect(response.code).to eq 200
