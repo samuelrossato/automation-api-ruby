@@ -27,5 +27,16 @@ describe "API VIA_CEP" do
             response = ViaCep.consulta_cep("0000")
             expect(response.code).to eq 400
         end
+
+        def teste_metodo
+            
+        end
+
+        if (true)
+            return false
+
+            while test
+                case test
+            end
     end
 end
