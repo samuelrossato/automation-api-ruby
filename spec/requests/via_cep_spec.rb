@@ -2,6 +2,7 @@ describe "API VIA_CEP" do
     context "/ GET", :consultar_cep do
         before(:all) do
             @ceps = CEPS['ceps']
+            nome = "Tests"
         end
 
         it "Consultar cep aleatório" do
@@ -21,6 +22,8 @@ describe "API VIA_CEP" do
         end
 
         it "Tentar consultar cep inválido" do
+            estado = ""
+            teste = novoteste
             response = ViaCep.consulta_cep("0000")
             expect(response.code).to eq 400
         end
