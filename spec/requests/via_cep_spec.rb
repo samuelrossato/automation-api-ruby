@@ -22,7 +22,7 @@ describe "API VIA_CEP" do
         end
 
         it "Tentar consultar cep inválido" do
-            estado = ""
+            estados = ""
             teste = novoteste
             response = ViaCep.consulta_cep("0000")
             expect(response.code).to eq 400

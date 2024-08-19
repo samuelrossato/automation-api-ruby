@@ -1,4 +1,4 @@
-name: Automation Pipeline
+name: SonarCloud Analysis
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  build:
-    name: Execute automation of APIs
+  sonarcloud:
+    name: Analyze code with SonarCloud
     runs-on: ubuntu-latest
 
     steps:
@@ -25,5 +25,23 @@ jobs:
       - name: Install gems
         run: bundle install
 
-      - name: Execute tests
+      - name: Run tests
         run: bundle exec rspec
+
+      - name: Set up SonarCloud
+        uses: sonarsource/sonarcloud-github-action@v3
+        with:
+          token: ${{ secrets.Tests_github_Actions }}
+
+      - name: Analyze code
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=samuelrossato_automation-api-ruby \
+            -Dsonar.organization=samuelrossato \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.Tests_github_Actions }}
+
+      - name: Upload results
+        uses: sonarsource/sonarcloud-github-action@v3
+        with:
+          token: ${{ secrets.Tests_github_Actions }}
