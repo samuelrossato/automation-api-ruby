@@ -11,8 +11,14 @@ pipeline {
         stage('Setup') {
             steps {
                 bat '''
+                    echo Installing Chocolatey and Ruby...
                     choco install ruby --version 3.1 -y
+                    echo Ruby installed:
+                    ruby -v
+                    echo Bundler installation...
                     gem install bundler
+                    echo Bundler installed:
+                    bundler -v
                 '''
             }
         }
